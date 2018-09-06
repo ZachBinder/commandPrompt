@@ -108,10 +108,10 @@ def findFiles(target, path):
 		if os.path.isfile(element):
 			if target in element:
 				files.append(path + os.sep + element)
-			else:
-				os.chdir(element)
-				files.extend(findFiles(target, os.getcwd()))
-				os.chdir("..")
+		else:
+			os.chdir(element)
+			files.extend(findFiles(target, os.getcwd()))
+			os.chdir("..")
 	return files 
 
 if __name__ == '__main__':
