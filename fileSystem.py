@@ -44,9 +44,9 @@ def runCommand(command):
 	elif command == '3':
 		moveDown(os.getcwd())
 	elif command == '4':
-		print("The total number of files is", countFiles(os.getcwd))
+		print("The total number of files is", countFiles(os.getcwd()))
 	elif command == '5':
-		print("The total number of bytes is", countBytes(os.getcwd))
+		print("The total number of bytes is", countBytes(os.getcwd()))
 	elif command == '6':
 		target = input("Enter the file name you are looking for: ")
 		fileList = findFiles(target, os.getcwd())
@@ -60,7 +60,7 @@ def listCurrentDir(dirName):
 	"""Prints a list of the Current Working Directories contents."""
 	lyst = os.listdir(dirName)
 	for element in lyst:
-		print(elements)
+		print(element)
 
 def moveUp():
 	"""Move up to the parent directory unless the cwd is the root"""
